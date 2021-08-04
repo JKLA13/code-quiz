@@ -1,10 +1,15 @@
 //declare variables
 
-//timer variables
+var startTimer = document.getElementById("timerStart")
 var timerEl = document.getElementById("countdown");
+var questionSection = document.getElementById("questionSection");
+var ulCreate = document.createElement("ul");
+
+// declare timer variables
 var timeLeft = 75;
-var timerCd;
+var timerHold = 0;
 var wrongPenalty = 10;
+
 
 // declare variables for scores: wins, losses, to store and pull from local storage for high scores
 var questionIndex = 0;
