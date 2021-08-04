@@ -1,12 +1,14 @@
-// make a btn and and event listener
-
-//research making a timer
-
 //declare variables
 
 var timerEl = document.getElementById("countdown");
 var time = 75;
 var timerCd;
+
+// declare variables for scores: wins, losses 
+
+var wins;
+var losses;
+
 
 //make an array of objects
 //(question: question, question: choices, key:value pair )
@@ -55,8 +57,15 @@ var questions = [
   },
 ];
 
+//need to display Coding Quiz title and Start Quiz btn
+
+// need to display question upon button click, and switch question upon button click
+
+//When questions or game is over, we need a text input for initials that pulls high scores from local storage
+
 // timer functions
 // set interval
+//when answers are wrong need to subtract time from clock
 function ticktock() {
   time--;
   timerEl.textContent = time;
@@ -66,8 +75,11 @@ function ticktock() {
   }
 }
 
+setInterval(ticktock, 1000);
 
 TODO:
-//Question index 0 ++, then next question
+// Question index 0 ++, then next question
 
-//setup if -  conditional statements to check which user answer picked
+// setup if -  conditional statements to check which user answer picked
+
+// make a btn and and event listener
