@@ -4,7 +4,7 @@ var timerEl = document.getElementById("countdown");
 var time = 75;
 var timerCd;
 
-// declare variables for scores: wins, losses 
+// declare variables for scores: wins, losses, to store and pull from local storage for high scores
 
 var wins;
 var losses;
@@ -59,7 +59,7 @@ var questions = [
 
 //need to display Coding Quiz title and Start Quiz btn
 
-// need to display question upon button click, and switch question upon button click
+// need to display question upon start quiz button click, and switch question upon answers submitted
 
 //When questions or game is over, we need a text input for initials that pulls high scores from local storage
 
