@@ -10,12 +10,10 @@ var timeLeft = 75;
 var timerHold = 0;
 var wrongPenalty = 10;
 
-
 // declare variables for scores: wins, losses, to store and pull from local storage for high scores
 var questionIndex = 0;
 var wins = 0;
 var losses = 0;
-
 
 //make an array of objects
 //(question: question, question: choices, key:value pair )
@@ -68,6 +66,22 @@ var questions = [
 
 TODO:// make a btn and and event listener
 //need to display Coding Quiz title and Start Quiz btn
+
+timerEl.addEventListener("click", function () {
+    if (timerHold === 0) {
+        timerHold = setInterval(function () {
+            timeLeft --;
+            timerEl.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timerHold);
+                stopQuiz();
+                timerEl.textContent = "All out of time :-("
+            }
+        }
+        
+    }
+}
 
 // need to display question upon start quiz button click, and switch question upon answers submitted
 
