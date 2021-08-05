@@ -18,5 +18,6 @@ This assignment was to build a code quiz from scratch HTML/CSS/JS that includes 
 
 ## Links
 
--
--
+-https://github.com/JKLA13/code-quiz
+
+-https://jkla13.github.io/code-quiz/
