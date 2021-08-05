@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <header id="scoreTimer">
+    <header id="scoreTimer ">
       <a href="" id="highscores">High Scores</a>
       <p>Timer: <span id="countdown">0</span></p>
     </header>
     <!-- figure out different "pages" or sections to target with start quiz, questions section, and highscore section to display and hide?? -->
-    <div id="questionSection">
-      <h1>Coding Quiz</h1>
-      <p>
-        Answer code based questions within a time limit. Incorrect answers will
-        result in a reduction on your timer.
-      </p>
-      <ul id="playerChoiceUl"></ul>
-      <button id="timerStart">Start Quiz</button>
+    <div id="sectionWrapper">
+      <div id="clickStop" class="hide"></div>
+      <div id="questionSection">
+        <h1>Coding Quiz</h1>
+        <div>
+          Answer code based questions within a time limit. Incorrect answers
+          will result in a reduction on your timer.
+        </div>
+        <button id="timerStart">Start Quiz</button>
+      </div>
     </div>
+    <div id="messages"></div>
     <script type="text/javascript" src="./assets/js/script.js"></script>
   </body>
 </html>
