@@ -1,5 +1,4 @@
 //declare variables
-
 var startTimer = document.getElementById("timerStart");
 var timerEl = document.getElementById("countdown");
 var questionSection = document.getElementById("questionSection");
