@@ -112,7 +112,7 @@ function answerCheck(event) {
     setTimeout(function () {
       messages.innerHTML = "";
       displayQuestion();
-    }, 2000);
+    }, 1000);
   }
 }
 
@@ -140,6 +140,8 @@ function stopQuiz() {
   }
 }
 
+//When questions or game is over, we need a text input for initials that pulls high scores from local storage
+
 // make a btn and and event listener
 //need to display Coding Quiz title and Start Quiz btn
 
@@ -159,5 +161,3 @@ startTimer.addEventListener("click", function () {
     }, 1000);
   }
 });
-
-//When questions or game is over, we need a text input for initials that pulls high scores from local storage
