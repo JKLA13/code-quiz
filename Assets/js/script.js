@@ -62,9 +62,91 @@ var questions = [
   },
 ];
 
+// need to display question upon start quiz button click, and switch question upon answers submitted
+
+
 ///3 different screens/setups
 
-TODO:// make a btn and and event listener
+function displayQuestion(questionIndex) {
+    questionSection.innerHTML = "";
+    ulCreate.innerHTML = "";
+
+    // Question index 0 ++, then next question
+    // need for loops
+    for  (var i = 0; i < questions.length; i++){
+      var playerQuestions = questions[questionIndex].question;
+      var playerAnswers = questions[questionIndex].choices;
+      questionSection.textContent = playerQuestions;
+
+    }
+}
+
+playerAnswers.forEach(function (newChoice) {
+  var newItem = document.createElement("li");
+  newItem.textContent = newChoice;
+  questionSection.appendChild(ulCreate);
+  ulCreate.appendChild(newItem);
+  newItem.addEventListener("lick", (answerCheck));
+
+});
+
+// setup if -  conditional statements to check which user answer picked
+function answerCheck(event) {
+  var elCheck = event.target;
+
+  if (elCheck.matches("li")) {
+    var newSection = document.createElement("div");
+    newSection.setAttribute("id", "newSection");
+  }
+  
+  if (elCheck.textContent == questions[questionIndex].answer) {
+    wins++;
+    userMessage.textContent = "You got the right answer: " + questions[questionIndex].answer) {
+
+    } else {
+      timeLeft = timeLeft - wrongPenalty;
+      newSection.textContent = "You guessed wrong!  Here's the correct answer: " + questions[questionIndex].answer;
+    }
+  }
+
+  questionIndex ++;
+
+  if (questionIndex >= questions.length) {
+    stopQuiz();
+    newSection.textContent = "Quiz Over!" + " " + "Your wins: " + wins + " out of" + questions.length + "!";
+
+  } else {
+    displayQuestion(questionIndex);
+  }
+  questionSection.appendChild(newSection);
+
+// Need End section
+function stopQuiz() {
+  questionSection.innerHTML = "";
+  timerEl.innerHTML = "";
+
+    var newH1 = document.createElement("h1");
+    newH1.setAttribute("id", "newH1");
+    newH1.textContent = "Quiz over!";
+
+    questionSection.appendChild(newH1);
+
+    var newP = document.createElement("p");
+    newP.setAttribute("id", "newP");
+    questionSection.appendChild(newP);
+
+  if (timeLeft >= 0) {
+    var secondsLeft = timeLeft;
+    var newP2 = document.createElement("p");
+    clearInterval(timerHold);
+    newP.textContent = "Your final score: " + secondsLeft;
+    newSection.appendChild(newP2);
+  }
+
+}
+
+
+// make a btn and and event listener
 //need to display Coding Quiz title and Start Quiz btn
 
 timerEl.addEventListener("click", function () {
@@ -78,35 +160,31 @@ timerEl.addEventListener("click", function () {
                 stopQuiz();
                 timerEl.textContent = "All out of time :-("
             }
-        }
-        
-    }
+        }, 1000);
+    } 
 }
 
-// need to display question upon start quiz button click, and switch question upon answers submitted
 
-TODO:
-// Question index 0 ++, then next question
 
 //When questions or game is over, we need a text input for initials that pulls high scores from local storage
 
-// setup if -  conditional statements to check which user answer picked
+
 
 
 // timer functions
 // set interval
 //when answers are wrong need to subtract time from clock
 
-function ticktock() {
-  time--;
-  timerEl.textContent = time;
+// function ticktock() {
+//   time--;
+//   timerEl.textContent = time;
 
-  if (time <= 0) {
-    stopQuiz(); //TODO: build stop quiz function
-  }
-}
+//   if (time <= 0) {
+//     stopQuiz(); //TODO: build stop quiz function
+//   }
+// }
 
-setInterval(ticktock, 1000);
+// setInterval(ticktock, 1000);
 
 
 
