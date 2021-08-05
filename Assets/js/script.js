@@ -161,5 +161,4 @@ startTimer.addEventListener("click", function () {
   }
 });
 
-TODO:
 //When questions or game is over, we need a text input for initials that pulls high scores from local storage
