@@ -141,6 +141,11 @@ function stopQuiz() {
 }
 
 //When questions or game is over, we need a text input for initials that pulls high scores from local storage
+// function scoreScreen() {
+//   var userInitials = document.createElement("div");
+
+//   localStorage.getItem(userInitials, wins);
+// }
 
 // make a btn and and event listener
 //need to display Coding Quiz title and Start Quiz btn
